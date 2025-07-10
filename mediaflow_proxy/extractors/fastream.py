@@ -19,7 +19,7 @@ class FastreamExtractor(BaseExtractor):
         """Extract Fastream URL."""
         final_url = await eval_solver(self,url,headers)
 
-        self.base_headers["referer"] = f'https://{url.replace('https://','').split('/')[0]}'
+        self.base_headers["referer"] = f'https://{url.replace('https://','').split('/')[0]}/'
         self.base_headers["origin"] = f'https://{url.replace('https://','').split('/')[0]}'
         self.base_headers['Accept-Language'] = 'en-US,en;q=0.5'
         self.base_headers['Accept'] = '*/*'
